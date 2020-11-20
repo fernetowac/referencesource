@@ -1237,7 +1237,7 @@ namespace System.IO {
             String fulldestDirName = Path.GetFullPathInternal(destDirName);
             String destPath = GetDemandDir(fulldestDirName, false);
 
-            if (PathInternal.IsDirectoryTooLong(sourcePath))
+            if (PathInternal.IsDirectoryTooLong(destPath))
                 throw new PathTooLongException(Environment.GetResourceString("IO.PathTooLong"));
 
 #if FEATURE_CORECLR
